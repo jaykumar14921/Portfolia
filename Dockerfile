@@ -1,11 +1,13 @@
 # Use nginx to serve static files
 FROM nginx:alpine
 
-# Remove the default nginx static files
+# Remove default nginx HTML
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy your portfolio files into the nginx web directory
-COPY . /usr/share/nginx/html
+# Copy your public folder content into nginx's html root
+COPY public/ /usr/share/nginx/html
 
-# Expose port 80 for web traffic
+# Fix permissions (optional but good)
+RUN chmod -R 755 /usr/share/nginx/html
+
 EXPOSE 80
