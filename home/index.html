@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF4U</title>
+    <link rel="icon" type="image" href="../public/assets/title_icon.png">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        header{
+            display: flex; 
+            justify-content:space-between; 
+            height: 65px; 
+            border: 20px;
+            padding-bottom: 5px;
+            box-shadow: 0px 3px 5px 4px rgba(128, 128, 128, 0.252);
+        }
+
+        .card_group{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card{
+            width: 200px;
+            margin: 10px;
+        }
+
+        .card:hover{
+            transform: scale(1.1);
+            box-shadow: 2px 2px 7px 2px rgba(128, 128, 128, 0.386);
+            cursor: pointer;
+        }
+
+        .card img{
+            height: 50px;
+            border-radius: 7px;
+        }
+
+        .card-header{
+            border: none;
+            background-color: white;
+        }
+        .card-body{
+            border: none;
+            margin-bottom: -20px;
+        }
+        .card-footer{
+            border: none;
+            background-color: white;
+            font-size: 13px;
+        }
+
+        
+
+    </style>
+
+   
+</head>
+<body>
+    
+    <header>
+        <div style="display: flex;">
+            <img src="../public/assets/logo1.png" height="100px" alt="Logo" style="margin-top: -7px;">
+        <div class="input-group ms-5 mt-4 mb-1">
+            <button class="btn btn-danger">All Tools</button>
+            <input class="form-control" type="text">
+            <button class="btn btn-danger"><span class="bi bi-search"></span></button>
+        </div>
+        </div>
+
+        <div class="mt-4" style="display: flex; justify-content: space-between;">
+            <i class="bi bi-person-circle mt-2 me-4" style="font-size:20px;"></i>
+            <i class="bi bi-list me-5" style="font-size:30px;"></i>
+        </div>
+    </header>
+
+    <div class="w-75 mt-4" style="display: block; justify-self: center;">
+        <div>
+            <h2 align="center">
+                Every tool you need to work with PDFs in one place
+            </h2>
+        </div>
+         <div>
+            <p align="center">
+                Every tool you need to use PDFs, at your fingertips. All are 100% FREE and easy to use! Merge, split, compress, convert, rotate, unlock and watermark PDFs with just a few clicks.
+            </p>
+         </div>
+    </div>
+
+   
+    <div class="card_group ms-5 me-5">
+
+        <div class="card">
+           <div class="card-header">
+            <img src="../public/assets/Merge_PDF.webp" alt="Merge_PDF">
+           </div>
+           <div class="card-body">
+            <h5>Merge PDF</h5>
+           </div>
+           <div class="card-footer">
+            <p>Combine PDFs in the order you want with the easiest PDF merger available.</p>
+           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+             <img src="../public/assets/Compress_PDF.png" alt="Compress_PDF">
+            </div>
+            <div class="card-body">
+             <h5>Compress PDF</h5>
+            </div>
+            <div class="card-footer">
+                <p>Combine PDFs in the order you want with the easiest PDF merger available.</p>
+            </div>
+         </div>
+
+         <div class="card" id="PDF-to-Word">
+            <div class="card-header">
+             <img src="../public/assets/pdf_to_word.png" alt="PDF_to_Word">
+            </div>
+            <div class="card-body">
+             <h5 id="card-3">PDF to Word</h5>
+            </div>
+            <div class="card-footer">
+                <p>Easily convert your PDF files into easy to edit DOC and DOCX documents. The converted WORD document is almost 100% accurate.</p>
+            </div>
+         </div>
+
+         <div class="card" id="PDF-to-PPT">
+            <div class="card-header">
+             <img src="../public/assets/PDF_to_PPT.svg" alt="PDF_to_PPT">
+            </div>
+            <div class="card-body">
+             <h5 id="card-4">PDF to PowerPoint</h5>
+            </div>
+            <div class="card-footer">
+                <p>Turn your PDF files into easy to edit PPT and PPTX slideshows.</p>
+            </div>
+         </div>
+
+         <div class="card" id="PDF-to-Excel">
+            <div class="card-header">
+             <img src="../public/assets/PDF-to-Excel.png" alt="PDF-to-Excel">
+            </div>
+            <div class="card-body">
+             <h5 id="card-5">PDF to Excel</h5>
+            </div>
+            <div class="card-footer">
+                <p>Pull data straight from PDFs into Excel spreadsheets in a few short seconds.</p>
+            </div>
+         </div>
+
+         <div class="card" id="PDF-to-JPG">
+            <div class="card-header">
+             <img src="../public/assets/pdf-to-jpg.jpg" alt="PDF-to-JPG">
+            </div>
+            <div class="card-body">
+             <h5 id="card-6">PDF to JPG</h5>
+            </div>
+            <div class="card-footer">
+                <p>Convert each PDF page into a JPG or extract all images contained in a PDF.</p>
+            </div>
+         </div>
+
+         <div class="card" id="Word-to-PDF">
+            <div class="card-header">
+             <img src="../public/assets/Word-to-PDF.png" alt="Word_to_PDF">
+            </div>
+            <div class="card-body">
+             <h5 id="card-7">Word to PDF</h5>
+            </div>
+            <div class="card-footer">
+                <p>Make DOC and DOCX files easy to read by converting them to PDF.</p>
+            </div>
+         </div>
+
+         <div class="card" id="PPT-to-PDF">
+            <div class="card-header">
+             <img src="../public/assets/PPT-to-PDF.svg" alt="PPT-to-PDF">
+            </div>
+            <div class="card-body">
+             <h5 id="card-8">PowerPiont to PDF</h5>
+            </div>
+            <div class="card-footer">
+                <p>Make PPT and PPTX slideshows easy to view by converting them to PDF.</p>
+            </div>
+         </div>
+
+         <div class="card" id="Excel-to-PDF">
+            <div class="card-header">
+             <img src="../public/assets/Excel-to-PDF.png" alt="Excel-to-PDF">
+            </div>
+            <div class="card-body">
+             <h5 id="card-9">Excel to PDF</h5>
+            </div>
+            <div class="card-footer">
+                <p>Make EXCEL spreadsheets easy to read by converting them to PDF.</p>
+            </div>
+         </div>
+
+         <div class="card" id="JPG-to-PDF">
+            <div class="card-header">
+             <img src="../public/assets/JPG-to-PDF.svg" alt="JPG-to-PDF">
+            </div>
+            <div class="card-body">
+             <h5 id="card-10">JPG to PDF</h5>
+            </div>
+            <div class="card-footer">
+                <p>Convert JPG images to PDF in seconds. Easily adjust orientation and margins.</p>
+            </div>
+         </div>
+
+    </div>
+
+    
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        $(function () {
+            $("#PDF-to-Word").click(function () {
+                const value = $("#card-3").text(); // Get the text from h5
+                localStorage.setItem("headerValue", value); // Store the value in localStorage
+                location.href = "upload.html"; // Navigate to upload.html
+            });
+        });
+
+        $(function () {
+            $("#PDF-to-PPT").click(function () {
+                const value = $("#card-4").text(); // Get the text from h5
+                localStorage.setItem("headerValue", value); // Store the value in localStorage
+                location.href = "upload.html"; // Navigate to upload.html
+            });
+        });
+
+        $(function () {
+            $("#PDF-to-Excel").click(function () {
+                const value = $("#card-5").text(); // Get the text from h5
+                localStorage.setItem("headerValue", value); // Store the value in localStorage
+                location.href = "upload.html"; // Navigate to upload.html
+            });
+        });
+
+        $(function () {
+            $("#PDF-to-JPG").click(function () {
+                const value = $("#card-6").text(); // Get the text from h5
+                localStorage.setItem("headerValue", value); // Store the value in localStorage
+                location.href = "upload.html"; // Navigate to upload.html
+            });
+        });
+
+        $(function () {
+            $("#Word-to-PDF").click(function () {
+                const value = $("#card-7").text(); // Get the text from h5
+                localStorage.setItem("headerValue", value); // Store the value in localStorage
+                location.href = "upload.html"; // Navigate to upload.html
+            });
+        });
+
+        $(function () {
+            $("#PPT-to-PDF").click(function () {
+                const value = $("#card-8").text(); // Get the text from h5
+                localStorage.setItem("headerValue", value); // Store the value in localStorage
+                location.href = "upload.html"; // Navigate to upload.html
+            });
+        });
+
+        $(function () {
+            $("#Excel-to-PDF").click(function () {
+                const value = $("#card-9").text(); // Get the text from h5
+                localStorage.setItem("headerValue", value); // Store the value in localStorage
+                location.href = "upload.html"; // Navigate to upload.html
+            });
+        });
+    </script>
+    
+</body>
+</html>
